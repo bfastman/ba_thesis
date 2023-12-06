@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title class="title">Das Hörspiel</title>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="#landing" class="navbar-logo">
+      <img src="/img/Logo_Illustrator_weiss.png" alt="Logo" id="navbar-logo-img">
+  </a>
+    <div id="navbarSupportedContent">
+        <ul class="nav-links">
+            <li class="nav-item active">
+                <a class="nav-link" href="#landing">Das Hörspiel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#thesis">Die These</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#project">Die Geschichten</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">Der Autor</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+</header>
+
+<section id="landing">
+  <h1 class="title">Das Hörspiel</h1>
+  <div id="landing-content">
+<h3 id="abstract">Wie fest knallte es eigentlich, als der Vesuv ausbrach? 
+  Wie muss ich mir die Entdeckung Amerikas auditiv vorstellen? 
+  Wie tönt es, wenn ganz Paris in revolutionärer Stimmung ist? 
+  Welche Geräusche waren am 9. November 1989 in Berlin zu hören? 
+  Dieses Hörspiel erzählt die Geschichten von vier verschiedenen 
+  Menschen, welche an schicksalhaften Tagen am richtigen 
+  (bezw. falschen) Ort waren und erzählen die Geschichte 
+  aus ihren Augen und Ohren. Begib dich auf Zeitreise!
+</h3>
+  <div id="bilder"></div>
+
+  </div>
+</section>
+
+<div id="audio-player-container">
+
+  <div class="audio-player">
+    <span id="song-title">Loading...</span>
+    <div class="controls-and-volume">
+      <div class="controls">
+        <button id="prev"></button>
+        <button id="playPause"></button>
+        <button id="next"></button>
+      </div>
+          <input type="range" id="volume-slider" min="0" max="100" value="100">
+    </div>
+    <div id="progressContainer">
+      <div id="progressBar"></div>
+    </div>
+  </div>
+
+  <audio id="audio">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<section id="thesis">
+  <h1 class="title">Die These</h1>
+  <h3 id="abstract">In meiner wissenschaftlichen Arbeit beschäftige ich mich 
+    mit den Chancen und Risiken von KI Stimmen. Welche Rolle 
+    spielen diese bereits jetzt? Wie steht es um die Akzeptanz 
+    in der Schweizer Bevölkerung? In journalistischen Inhalten? 
+    Was für einen Einfluss hat das auf die Sprecher:innen? 
+    Braucht es bald keine Moderatorinnen oder Synchronsprecher mehr? 
+  </h3>
+  <div id="inhalt">
+    <p><strong>Relevanz</strong></p>
+    <p>Künstliche Intelligenz entwickelt sich aktuell schneller als wir Regeln oder ethische Richtlinien dafür aufstellen können. Dennoch gibt es bereits diverse Anwendungsvorschläge in der Medien- und Filmindustrie, wie diese in der Inhaltsproduktion mitwirken könnte(1). Das schürt allerdings auch Ängste der Ersetzbarkeit. Indem wir den Einsatz von KI-Stimmen zulassen, lassen wir einen Eingriff in unser ältestes und intimstes Kommunikationsmediums auf. Denn Stimme und Sprache vermitteln nicht nur Informationen, sondern auch Emotionen und Haltung.</p>
+    <p><strong>Forschungslücke</strong></p>
+    <p>Eine Studie des Forschungszentrums Öffentlichkeit und Gesellschaft hat ergeben, dass eine Mehrheit der Schweizer:innen Vorbehalte gegen den Einsatz von KI im Journalismus hat. Der Hauptfokus lag dabei auf der Produktion journalistischer Textbeiträge mithilfe von KI(2).Doch über den Einsatz von KI-Stimmen in journalistischen Inhalten ist noch sehr wenig bis nichts bekannt.</p>
+    <p><strong>Forschungsmethode</strong></p>
+    <ul>
+      <li>Qualitative Interviews zur Akzeptanz von KI Stimmen in journalistischen Formaten</li>
+      <li>Experiment zur Erkennung von Stimmen</li>
+      <li>Experteninterviews mit Stimm- und Sprechcoaches und Sprecher:innen</li>
+    </ul>
+  </div>
+  </section>
+
+<section id="project">
+<h1 class="title">Die Geschichten</h1>
+<h3>Hier kannst du die Geschichten einzeln auswählen.
+</h3>
+
+<div id="inhalt">
+  <ul id="songList">
+    <!-- Songs will be populated here from the JS -->
+  </ul>
+</div>
+
+</section>
+
+<section id="about">
+  <h1 class="author">Der Autor</h1>
+    <div class="content-wrapper">
+      <h3 id="abstract">
+        Basil Schnellmann ist ein Multimedia Production Student, der seinen Platz in der Welt auf der Bühne, vor dem Mikrofon, hinter der Bartheke, in Brettspielen oder beim Reisen sucht.
+      </h3>
+      <img id="bilder" src="/img/portrait_basil.JPG" alt="Basil Schnellmann" class="author-image">
+    </div>
+  </section>
+
+  <footer>
+    <p id="footer-text">Ein Projekt im Rahmen des Moduls Interaktive Medien V der FHGR</p>
+</footer>
+
+  <script src="js/control.js"></script>
+</body>
+</html>

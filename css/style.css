@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  padding: 5px;
+}
+
+ul{
+  margin-left: 8.5%;
+  margin-right: 7.5%;
+  padding: 5px;
+}
+
+/* Display the #landing section by default */
+section {
+  display: none;
+}
+
+#landing {
+  display: block;
+}
+
+#landing-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 605px;
+  overflow: auto;
+}
+
+#abstract, #bilder {
+  width: 50%;
+}
+
+#abstract {
+  margin-right: 7.5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#bilder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Other styles for #bilder remain the same */
+}
+
+#bilder img {
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  /* Adjust img properties if needed */
+}
+
+.navbar-logo {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#navbar-logo-img {
+  height: 160px; /* or whatever size you want for your logo */
+  width: auto; /* maintain aspect ratio */
+}
+
+.title {
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6e12b4;
+  margin-top: 2.5%;
+  margin-left: 7.5%;
+}
+
+.author {
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #6e12b4;
+  margin-top: 2.5%;
+  margin-left: 7.5%;
+}
+
+h3{
+  margin-top: 10px;
+  margin-left: 7.5%;
+}
+
+h2{
+  margin-top: 2.5%;
+  margin-left: 7.5%;
+}
+
+#about {
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+#inhalt {
+  height: 75vh;
+}
+
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 605px;
+  overflow: auto;
+}
+
+.author-image {
+  max-width: 600px; /* or whatever size you desire */
+  height: auto;
+  margin-right: 7.5%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow to the image */
+}
+
+/* Media query for screens smaller than 1300px */
+@media (max-width: 1300px) {
+  
+  #navbar-logo-img {
+    height: 35px;   /* Adjust the size as needed for this viewport */
+}
+  
+  .content-wrapper {
+    flex-direction: row;
+    align-items: start;
+    gap: 15px;
+  }
+  
+  .author-image {
+    margin-right: 7.5%;
+    width: 80%;  /* Adjust this percentage as desired to control the image's responsive width */
+    max-width: 400px;
+  }
+}
+
+.abstract {
+  flex: 1; /* allows the paragraph to take up the remaining space */
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  margin-left: 7.5%;
+}
+
+.navbar{
+	background-color: #6e12b4;
+	padding: 0px;
+  height: 200px;
+
+}
+
+.navbar-logo {
+  display: inline-block;
+  margin-right: 20px; /* spacing between logo and next navbar item */
+}
+
+#navbar-logo-img {
+  height: 160px; /* or whatever size you want for your logo */
+  width: auto; /* maintain aspect ratio */
+}
+
+
+#navbarSupportedContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  height: 160%;            
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  background: #00a574;
+  margin-top: -290px;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.nav-links li{
+  list-style: none;
+  margin: 0 12px;
+}
+
+.nav-links li a{
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight:500;
+
+  padding: 6px 0;
+  text-decoration: none;
+}
+
+.nav-links li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #ffffff;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.nav-links li a:hover:before{
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar, #navbarSupportedContent {
+      width: 100%;  /* Takes the full width of the screen */
+      height: 15vh;
+      padding: 2%; /* Takes the full height of the screen */
+      position: fixed; /* Keeps it in place when user scrolls */
+      top: 0;
+      left: 0;
+      overflow-y: auto; /* Allows for scrolling if the content exceeds the screen height */
+      background-color: #00a574/* Assuming a dark background; adjust as needed */
+  }
+
+  #navbar-logo-img {
+    height: 30px;   /* Adjust the size as needed for this viewport */
+}
+
+  .nav-links li {
+    display: inline-block; /* Make each list item display inline */
+    margin-right: 10px;    /* Add some spacing between the links, adjust as needed */
+}
+
+  .nav-links li a {
+      font-size: 24px;
+      padding: 20px 15px; 
+  }
+
+  .nav-links {
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 0px;
+  }
+  
+  .title {
+    margin-top: 35%;
+  }
+
+  .author {
+    margin-top: 0%;
+  }
+
+  #landing {
+    display: block;
+    margin-top: 150px;
+  }
+  
+  #landing-content {
+    flex-direction: column;
+  }
+
+  #abstract, #bilder {
+    width: 80%;
+    margin-left: 7.5%;
+  }
+
+  #bilder img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+
+  #thesis {
+    margin-top: 150px;
+  }
+
+  #project {
+    margin-top: 150px;
+  }
+
+  #about {
+    margin-top: 150px;
+  }
+
+  .nav-links li a:before{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #ffffff;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+  }
+  
+  .nav-links li a:hover:before{
+    width: 100%;
+  }
+
+
+  .content-wrapper {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+
+  .author-image {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 320px;
+  }
+}
+
+
+
+#audio-player-container {
+  position: fixed;
+  bottom: 7%; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 100; 
+  
+  border-radius: 25px;
+  padding: 25px; 
+  width: auto; 
+  max-width: 80%; 
+  background-color: white; 
+
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  margin: auto; 
+  gap: 10px; 
+}
+
+.controls-and-volume {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  gap: 10px; 
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume-slider {
+  margin-left: auto;
+}
+
+#progressContainer {
+  flex-grow: 1;
+  height: 5px;
+  background: #e0e0e0;
+  width: 100%;
+}
+
+#progressBar {
+  height: 5px;
+  background: #000000;
+  width: 0;
+}
+
+@media (max-width: 768px) { 
+  .audio-player {
+      padding: 0%; 
+  }
+
+  #progressContainer {
+      width: 100%;
+  }
+
+  .controls-and-volume{
+    padding-bottom: 10px;
+  }
+}
+
+/*Ende Code für den Audioplayer*/
+
+/*Code für den Play Button*/
+#playPause {
+  border: 0;
+  background: transparent;
+  box-sizing: border-box;
+  width: 0;
+  height: 55.5px;
+  border-color: transparent transparent transparent #202020;
+  transition: 100ms all ease;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 27.75px 0 27.75px 45px;
+}
+
+#playPause:hover {
+  border-color: transparent transparent transparent #404040;
+}
+
+#playPause.paused {
+  border-style: double;
+  border-width: 0px 0 0px 45px; /* Adjusted the border width */
+}
+
+#prev {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-top: 22.5px solid transparent;    /* Adjusted from 30px */
+  border-bottom: 22.5px solid transparent;  /* Adjusted from 30px */
+  border-left: 22.5px solid transparent;
+  border-right: 22.5px solid #202020;      
+  cursor: pointer;
+  transition: 100ms all ease;
+  margin-right: 10px;  /* your added margin to fix the shadow */
+}
+
+#prev:hover {
+  border-right-color: #404040;
+}
+
+#next {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  background-color: transparent;
+  border-top: 22.5px solid transparent;    /* Adjusted from 30px */
+  border-bottom: 22.5px solid transparent;
+  border-right: 22.5px solid transparent; 
+  border-left: 22.5px solid #202020;       
+  cursor: pointer;
+  transition: 100ms all ease;
+  margin-left: 10px;   /* your added margin to fix the shadow */
+}
+
+#next:hover {
+  border-left-color: #404040;
+}
+
+#playPause, #prev, #next {
+  vertical-align: middle;
+}
+
+#songList {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  margin-top: 2.5%;
+}
+
+#songList li {
+  padding: 10px;
+  background-color: #f5f5f5;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+#songList li:hover {
+  background-color: #ddd;
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: flex-end; /* aligns items to the end of the main axis */
+  align-items: flex-end; /* aligns items to the end of the cross axis */
+  padding: 20px; /* adjust as necessary */
+  background-color: #f5f5f5; /* adjust background color as necessary */
+}
